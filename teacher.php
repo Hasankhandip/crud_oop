@@ -9,7 +9,7 @@
 
 <section class="mainleft">
 <?php
-    $user = new Student();
+    $user = new Teacher();
     if (isset($_POST['create'])) {
         $name = $_POST['name'];
         $dep  = $_POST['dep'];
@@ -137,8 +137,8 @@
         <td><?php echo $value['dep']; ?></td>
         <td><?php echo $value['age']; ?></td>
         <td>
-        <?php echo "<a href='index.php?action=update&id=" . $value['id'] . "'>Edit</a>"; ?> ||
-        <?php echo "<a href='index.php?action=delete&id=" . $value['id'] . "' onClick='return confirm(\"Are you sure to delete data...\")'>Delete</a>"; ?>
+        <?php echo "<a href='teacher.php?action=update&id=" . $value['id'] . "'>Edit</a>"; ?> ||
+        <?php echo "<a href='teacher.php?action=delete&id=" . $value['id'] . "' onClick='return confirm(\"Are you sure to delete data...\")'>Delete</a>"; ?>
         </td>
     </tr>
     <?php
